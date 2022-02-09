@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { welcome, gelenGiden } = require("../../settings/channels.json");
+const { welcome } = require("../../settings/channels.json");
 const { unRegistered } = require("../../settings/roles.json");
 const momentz = require("moment-timezone");
 
@@ -10,11 +10,6 @@ const momentz = require("moment-timezone");
 
 module.exports = async (client, member) => {
     const guild = member.guild;
-    const ggChannel = guild.channels.cache.get(gelenGiden);
-
-    if (!ggChannel) return console.log("gg channel not found");
-    ggChannel.send(`${member} sunucuya katıldı.`);
-
     const welcomeChannel = guild.channels.cache.get(welcome);
     if (!welcomeChannel) return console.log("Welcome channel not found");
 
@@ -39,11 +34,7 @@ module.exports = async (client, member) => {
         .setColor("BLUE")
         .setAuthor({
             name: `${member.user.username}`,
-            iconURL: `${
-                member.user.avatarURL()
-                    ? member.user.avatarURL()
-                    : member.user.defaultAvatarURL
-            }`,
+            iconURL: `${member.user.displayAvatarURL()}`,
         })
         .setThumbnail(member.user.displayAvatarURL())
         .setDescription(`**${member} sunucuya katıldı.

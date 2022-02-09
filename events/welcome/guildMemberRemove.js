@@ -1,15 +1,25 @@
 const Discord = require("discord.js");
-const { gelenGiden } = require("../../settings/channels.json");
+const { welcome } = require("../../settings/channels.json");
 
 /**
  * @param {Discord.Client} client
  * @param {Discord.GuildMember} member
  */
 
-module.exports = async (client, member) => {
-    const guild = member.guild;
-    const ggChannel = guild.channels.cache.get(gelenGiden);
-    if (!ggChannel) return console.log("gg channel not found");
+module.exports = (client, member) => {
+    const welcomeChannel = member.guild.channels.cache.get(welcome);
+    if (!welcomeChannel) return console.log("Welcome channel not found");
 
-    ggChannel.send(`${member} sunucudan ayrıldı.`);
+    const embed = new Discord.MessageEmbed()
+        .setColor("RED")
+        .setAuthor({
+            name: `${member.user.username}`,
+            iconURL: `${member.user.displayAvatarURL()}`,
+        })
+        .setThumbnail(member.user.displayAvatarURL())
+        .setDescription(`**${member} sunucudan ayrıldı.
+
+Sen çıkınca \`${member.guild.memberCount}\` kişi kaldık.**`);
+
+    welcomeChannel.send({ embeds: [embed] });
 };
