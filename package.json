@@ -4,7 +4,7 @@
     "description": "Seraphim Register Bot",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon --exec babel-node -- ./index.js",
+        "start": "nodemon ./index.js",
         "server": "pm2 start ./index.js --name s-register"
     },
     "repository": "https://github.com/erencfc/seraphim-bots",
