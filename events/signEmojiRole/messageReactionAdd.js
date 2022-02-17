@@ -11,11 +11,13 @@ module.exports = async (client, reaction, user) => {
     check(reaction, user, "signRole")
         .then(async (role) => {
             const guild = reaction.message.guild;
-            const member = await guild.members
-                .fetch()
-                .then((members) =>
-                    members.find((member) => member.id === user.id)
-                );
+            let member = guild.members.cache.get(user.id);
+            if (!member)
+                member = await guild.members
+                    .fetch()
+                    .then((members) =>
+                        members.find((member) => member.id === user.id)
+                    );
 
             if (!role) return;
 

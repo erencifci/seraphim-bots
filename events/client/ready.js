@@ -13,55 +13,49 @@ module.exports = async (client) => {
     client.user.setActivity("Developed by KLeesD", { type: "LISTENING" });
     console.log("Seraphim Register Online!");
 
-    //     let emoji = (id) => client.emojis.cache.find((emoji) => emoji.id === id);
+    // let emoji = (id) => client.emojis.cache.find((emoji) => emoji.id === id);
 
-    //     client.guilds.cache
-    //         .first()
-    //         .channels.fetch()
-    //         .then(async (channels) => {
-    //             let channel = channels.find(
-    //                 (channel) => channel.id === "940698288598970459"
-    //             );
-    //             const message = await channel.send(`***__Oyun Rolleri__***
+    // client.guilds.cache
+    //     .first()
+    //     .channels.fetch()
+    //     .then(async (channels) => {
+    //         let channel = channels.find(
+    //             (channel) => channel.id === "943947250638409758"
+    //         );
+    //         const message = await channel.send(`***__Burç Rolleri__***
 
-    // **CSGO: ${emoji(emojis.csgo)}**
+    // **Balık: ${emoji(emojis.balik)}**
 
-    // **Valorant: ${emoji(emojis.valorant)}**
+    // **Oğlak: ${emoji(emojis.oglak)}**
 
-    // **PUBG: ${emoji(emojis.pubg)}**
+    // **İkizler: ${emoji(emojis.ikizler)}**
 
-    // **Rainbow Six Siege: ${emoji(emojis.rainbow_six_siege)}**
+    // **Başak: ${emoji(emojis.basak)}**
 
-    // **LoL: ${emoji(emojis.lol)}**
+    // **Aslan: ${emoji(emojis.aslan)}**
 
-    // **Rust: ${emoji(emojis.rust)}**
+    // **Koç: ${emoji(emojis.koc)}**
 
-    // **Minecraft: ${emoji(emojis.minecraft)}**
+    // **Akrep: ${emoji(emojis.akrep)}**
 
-    // **ETS 2: ${emoji(emojis.ets2)}**
+    // **Terazi: ${emoji(emojis.terazi)}**
 
-    // **Fifa 21-22: ${emoji(emojis.FIFA)}**
+    // **Yay: ${emoji(emojis.yay)}**
 
-    // **GTA 5: ${emoji(emojis.gta_5)}**
+    // **Yengeç: ${emoji(emojis.yengec)}**
 
-    // **Apex Legends: ${emoji(emojis.apex_legends)}**
+    // **Boğa: ${emoji(emojis.boga)}**`);
 
-    // **Rocket League: ${emoji(emojis.rocket_league)}**
-
-    // **The Forest: ${emoji(emojis.theForest)}**`);
-
-    //             await message.react(emoji(emojis.csgo));
-    //             await message.react(emoji(emojis.valorant));
-    //             await message.react(emoji(emojis.pubg));
-    //             await message.react(emoji(emojis.rainbow_six_siege));
-    //             await message.react(emoji(emojis.lol));
-    //             await message.react(emoji(emojis.rust));
-    //             await message.react(emoji(emojis.minecraft));
-    //             await message.react(emoji(emojis.ets2));
-    //             await message.react(emoji(emojis.FIFA));
-    //             await message.react(emoji(emojis.gta_5));
-    //             await message.react(emoji(emojis.apex_legends));
-    //             await message.react(emoji(emojis.rocket_league));
-    //             await message.react(emoji(emojis.theForest));
-    //         });
+    //         await message.react(emoji(emojis.balik));
+    //         await message.react(emoji(emojis.oglak));
+    //         await message.react(emoji(emojis.ikizler));
+    //         await message.react(emoji(emojis.basak));
+    //         await message.react(emoji(emojis.aslan));
+    //         await message.react(emoji(emojis.koc));
+    //         await message.react(emoji(emojis.akrep));
+    //         await message.react(emoji(emojis.terazi));
+    //         await message.react(emoji(emojis.yay));
+    //         await message.react(emoji(emojis.yengec));
+    //         await message.react(emoji(emojis.boga));
+    //     });
 };
