@@ -17,6 +17,8 @@ module.exports = async (client, reaction, user) => {
                     members.find((member) => member.id === user.id)
                 );
 
+            if (!role) return;
+
             if (member.roles.cache.has(role.id)) return;
 
             await member.roles.add(role, "Rol Sistemi").catch(console.error);

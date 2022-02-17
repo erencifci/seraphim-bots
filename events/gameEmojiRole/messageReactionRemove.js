@@ -14,6 +14,8 @@ module.exports = async (client, reaction, user) => {
             .fetch()
             .then((members) => members.find((member) => member.id === user.id));
 
+        if (!role) return;
+
         if (!member.roles.cache.has(role.id)) return;
 
         await member.roles.remove(role, "Rol Sistemi").catch(console.error);

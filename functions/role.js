@@ -11,8 +11,7 @@ module.exports = {
 
         if (!member) return console.log("Member not found!");
         if (member.user.bot) return;
-        if (reaction.message.channel.id != channels[channel])
-            return console.log("Channel not found!");
+        if (reaction.message.channel.id != channels[channel]) return;
 
         const emojiName = reaction.emoji.name.toLowerCase();
 
