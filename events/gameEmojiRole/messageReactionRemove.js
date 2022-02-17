@@ -8,7 +8,7 @@ const { check } = require("../../functions/role");
  */
 
 module.exports = async (client, reaction, user) => {
-    check(client, reaction, user).then(async (role) => {
+    check(reaction, user, "gameRole").then(async (role) => {
         const guild = reaction.message.guild;
         const member = await guild.members
             .fetch()

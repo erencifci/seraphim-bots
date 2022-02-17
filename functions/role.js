@@ -1,10 +1,9 @@
-const { gameRole: roleChannel } = require("../settings/channels.json");
-
 const roles = require("../settings/roles.json");
+const channels = require("../settings/channels.json");
 const emojis = require("../settings/emojis.json");
 
 module.exports = {
-    check: async (client, reaction, user) => {
+    check: async (reaction, user, channel) => {
         const guild = reaction.message.guild;
         const member = await guild.members
             .fetch()
@@ -12,7 +11,8 @@ module.exports = {
 
         if (!member) return console.log("Member not found!");
         if (member.user.bot) return;
-        if (reaction.message.channel.id != roleChannel) return;
+        if (reaction.message.channel.id != channels[channel])
+            return console.log("Channel not found!");
 
         const emojiName = reaction.emoji.name.toLowerCase();
 
