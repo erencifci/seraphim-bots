@@ -1,0 +1,19 @@
+{
+    "name": "register",
+    "version": "1.0.0",
+    "description": "Seraphim Register Bot",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon ./index.js",
+        "server": "pm2 start ./index.js --name s-register"
+    },
+    "repository": "https://github.com/erencfc/seraphim-bots",
+    "author": "KLeesD",
+    "license": "MIT",
+    "dependencies": {
+        "ascii-table": "^0.0.9",
+        "discord.js": "^13.6.0",
+        "dotenv": "^14.3.2",
+        "moment-timezone": "^0.5.34"
+    }
+}
