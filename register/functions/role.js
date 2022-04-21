@@ -5,10 +5,7 @@ const emojis = require("../settings/emojis.json");
 module.exports = {
     check: async (reaction, user, channel) => {
         const guild = reaction.message.guild;
-        const member = await guild.members
-            .fetch()
-            .then((members) => members.find((member) => member.id === user.id));
-
+        const member = await guild.members.fetch(user.id);
         if (!member) return console.log("Member not found!");
         if (member.user.bot) return;
         if (reaction.message.channel.id != channels[channel]) return;
